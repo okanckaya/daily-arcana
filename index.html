@@ -6,10 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Moirai Within – Aurora Tarot</title>
+    <title>Moirai Within – Journaling & Mindfulness</title>
     <meta
       name="description"
-      content="Moirai Within – aurora-inspired tarot, rituals and mindfulness in one liquid-glass interface."
+      content="Moirai Within – aurora-inspired tarot, manifestation, rituals, mindfulness and journaling in one liquid-glass space."
     />
     <meta name="theme-color" content="#020617" />
 
@@ -69,32 +69,299 @@
         -webkit-backdrop-filter: blur(32px) saturate(140%);
         background: radial-gradient(circle at 50% 0%, rgba(15, 23, 42, 0.4), transparent 60%);
       }
-    </style>
 
-    <!-- React import map (kept from previous setup) -->
-    <script type="importmap">
-      {
-        "imports": {
-          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-          "react/": "https://aistudiocdn.com/react@^19.2.0/",
-          "react": "https://aistudiocdn.com/react@^19.2.0"
-        }
+      .glass-card {
+        background: radial-gradient(circle at top, rgba(248, 250, 252, 0.08), transparent 55%),
+          rgba(15, 23, 42, 0.75);
+        border-radius: 1.5rem;
+        border: 1px solid rgba(248, 250, 252, 0.12);
+        box-shadow:
+          0 18px 45px rgba(15, 23, 42, 0.9),
+          0 0 0 1px rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(22px) saturate(140%);
+        -webkit-backdrop-filter: blur(22px) saturate(140%);
       }
-    </script>
-
-    <!-- Entry bundle (update filename to your new build if needed) -->
-    <script
-      type="module"
-      crossorigin
-      src="./assets/index-Cm76FFn4.js"
-    ></script>
+    </style>
   </head>
-  <body class="h-full min-h-screen antialiased text-slate-100">
+
+  <body class="h-full min-h-screen antialiased text-slate-50">
     <!-- Aurora background layers -->
     <div class="aurora-bg"></div>
     <div class="aurora-overlay"></div>
 
-    <!-- React root -->
-    <div id="root" class="relative min-h-screen flex flex-col"></div>
+    <div class="relative min-h-screen">
+      <!-- Top nav -->
+      <header class="max-w-6xl mx-auto px-4 pt-6 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div
+            class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-cyan-300/80 via-violet-400/80 to-emerald-300/80 shadow-lg shadow-cyan-500/40 flex items-center justify-center"
+          >
+            <span class="text-xs font-semibold tracking-[0.14em] text-slate-950">
+              MW
+            </span>
+          </div>
+          <div>
+            <div class="font-cinzel text-lg tracking-[0.18em] uppercase">
+              Moirai Within
+            </div>
+            <p class="text-xs text-slate-300/80">
+              Aurora Tarot • Rituals • Mindful Space
+            </p>
+          </div>
+        </div>
+
+        <!-- App store placeholder button -->
+        <a
+          href="#"
+          class="inline-flex items-center gap-2 rounded-full bg-slate-950/60 px-4 py-2 text-xs font-medium text-slate-50 border border-slate-500/40 hover:border-cyan-300/70 hover:bg-slate-900/80 transition-colors"
+        >
+          <span class="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_12px_rgba(52,211,153,0.9)]"></span>
+          <span>Coming soon on the App Store</span>
+        </a>
+      </header>
+
+      <!-- Hero -->
+      <main class="max-w-6xl mx-auto px-4 pt-12 pb-20">
+        <section class="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] items-center">
+          <div>
+            <p class="text-xs font-semibold tracking-[0.24em] uppercase text-cyan-200/80 mb-3">
+              AURORA-LIT TAROT SPACE
+            </p>
+            <h1 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4">
+              Aurora tarot, rituals and
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-200 via-violet-200 to-emerald-200">
+                quiet inner realignment
+              </span>
+              — in one app.
+            </h1>
+            <p class="text-sm sm:text-base text-slate-200/85 max-w-xl mb-6">
+              Moirai Within is a gentle, aurora-inspired space where you can pull tarot,
+              set intentions, move through simple rituals, breathe more softly and keep
+              a living record of your inner journey.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3 mb-2">
+              <button
+                class="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium bg-gradient-to-r from-cyan-300 via-violet-300 to-emerald-300 text-slate-950 shadow-lg shadow-cyan-500/40 hover:brightness-105 transition"
+              >
+                Explore the pillars
+              </button>
+              <button
+                class="inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-xs sm:text-sm font-medium bg-slate-900/70 text-slate-100 border border-slate-500/50 hover:border-cyan-300/70 hover:bg-slate-900/90 transition"
+              >
+                View app preview
+              </button>
+            </div>
+
+            <p class="text-xs text-slate-400/90">
+              Daily-friendly. No doom, no fear-based language — just softly honest insight.
+            </p>
+          </div>
+
+          <!-- Right hero glass card -->
+          <div class="glass-card p-5 sm:p-6 lg:p-7 mt-4 lg:mt-0">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div>
+                <p class="text-xs tracking-[0.18em] uppercase text-cyan-200/80 mb-1">
+                  TODAY'S THREAD
+                </p>
+                <h2 class="font-cinzel text-xl">
+                  Align with the version of you that’s already ready.
+                </h2>
+              </div>
+              <div
+                class="h-12 w-12 rounded-2xl bg-gradient-to-tr from-violet-400/90 via-cyan-300/90 to-emerald-300/90 flex items-center justify-center text-slate-950 shadow-lg shadow-violet-500/50"
+              >
+                <span class="text-lg">✶</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-200/85 mb-4">
+              Begin with a tarot spread, anchor it with a manifestation prompt, then close
+              with a two-minute ritual or mindful check-in. Everything can be saved to your
+              journal with a single tap.
+            </p>
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div class="rounded-xl border border-slate-500/40 bg-slate-900/60 p-3">
+                <p class="text-[0.65rem] tracking-[0.16em] uppercase text-slate-400 mb-1">
+                  DAILY TAROT
+                </p>
+                <p class="text-slate-100">
+                  Gentle, grounded reflections for the day ahead.
+                </p>
+              </div>
+              <div class="rounded-xl border border-slate-500/40 bg-slate-900/60 p-3">
+                <p class="text-[0.65rem] tracking-[0.16em] uppercase text-slate-400 mb-1">
+                  JOURNALING
+                </p>
+                <p class="text-slate-100">
+                  Keep a soft archive of the themes that keep returning.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Five pillars -->
+        <section class="mt-16">
+          <p class="text-xs font-semibold tracking-[0.26em] uppercase text-slate-300/80 mb-3">
+            THE FIVE PILLARS OF MOIRAI WITHIN
+          </p>
+          <h2 class="font-cinzel text-2xl sm:text-3xl mb-6">
+            One aurora space, five ways to meet yourself.
+          </h2>
+
+          <div class="grid gap-6 lg:grid-cols-3">
+            <!-- Tarot Guidance -->
+            <article class="glass-card p-5 sm:p-6 flex flex-col gap-3">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <p class="text-[0.65rem] tracking-[0.2em] uppercase text-cyan-200/85 mb-1">
+                    TAROT GUIDANCE
+                  </p>
+                  <h3 class="font-cinzel text-lg">Readings that actually land.</h3>
+                </div>
+                <div
+                  class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-cyan-300/90 via-sky-400/90 to-violet-300/90 flex items-center justify-center text-slate-950 text-base"
+                >
+                  ✧
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-200/85">
+                Step into a calm, aurora-soaked space and draw cards with intention. From
+                Daily Tarot to Past–Present–Future and Mind–Heart–Action, readings are
+                written to be gentle, grounded and usable in your real day — never doom-y or
+                fear-based.
+              </p>
+              <p class="text-xs text-cyan-200/90 mt-1">
+                Pull cards once a day or go deeper with layered spreads that mirror your
+                mind, heart and next steps.
+              </p>
+            </article>
+
+            <!-- Manifestation -->
+            <article class="glass-card p-5 sm:p-6 flex flex-col gap-3">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <p class="text-[0.65rem] tracking-[0.2em] uppercase text-emerald-200/85 mb-1">
+                    MANIFESTATION
+                  </p>
+                  <h3 class="font-cinzel text-lg">Intention, without the pressure.</h3>
+                </div>
+                <div
+                  class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-emerald-300/90 via-teal-300/90 to-cyan-300/90 flex items-center justify-center text-slate-950 text-base"
+                >
+                  ☽
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-200/85">
+                Turn vague wishes into clear, written intentions. Choose a focus — love,
+                healing, money, self-trust — and work with prompts that help you gently
+                rehearse the version of you who can hold what you’re calling in.
+              </p>
+              <p class="text-xs text-emerald-200/90 mt-1">
+                Turn vague wishes into clear intentions you can revisit, refine and
+                actually embody.
+              </p>
+            </article>
+
+            <!-- Rituals -->
+            <article class="glass-card p-5 sm:p-6 flex flex-col gap-3">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <p class="text-[0.65rem] tracking-[0.2em] uppercase text-rose-200/85 mb-1">
+                    RITUALS
+                  </p>
+                  <h3 class="font-cinzel text-lg">Tiny ceremonies for real life.</h3>
+                </div>
+                <div
+                  class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-rose-300/90 via-fuchsia-300/90 to-violet-300/90 flex items-center justify-center text-slate-950 text-base"
+                >
+                  ✺
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-200/85">
+                Close a chapter, welcome a new moon, release a heavy thought or bless a new
+                intention — in just a few minutes. Rituals stay simple on purpose, blending
+                soft wording, optional tarot prompts and small gestures you can actually
+                follow through on.
+              </p>
+              <p class="text-xs text-rose-200/90 mt-1">
+                Guided micro-rituals to close, cleanse, call in and realign — no full altar
+                required.
+              </p>
+            </article>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-2 mt-6">
+            <!-- Mindfulness -->
+            <article class="glass-card p-5 sm:p-6 flex flex-col gap-3">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <p class="text-[0.65rem] tracking-[0.2em] uppercase text-sky-200/85 mb-1">
+                    MINDFULNESS
+                  </p>
+                  <h3 class="font-cinzel text-lg">Nervous-system-level calm.</h3>
+                </div>
+                <div
+                  class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-sky-300/90 via-cyan-300/90 to-indigo-300/90 flex items-center justify-center text-slate-950 text-base"
+                >
+                  ◦
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-200/85">
+                Mindfulness flows focus on small, doable practices: guided breaths, digital
+                detox sequences, sleep prep and gentle check-ins. No streak pressure, no
+                “optimize yourself” vibe — just a quieter mind and a body that feels a
+                little safer to be in.
+              </p>
+              <p class="text-xs text-sky-200/90 mt-1">
+                Slow down with breathing, screen-time breaks and evening wind-downs that
+                respect your energy.
+              </p>
+            </article>
+
+            <!-- Journaling -->
+            <article class="glass-card p-5 sm:p-6 flex flex-col gap-3">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <p class="text-[0.65rem] tracking-[0.2em] uppercase text-violet-200/85 mb-1">
+                    JOURNALING
+                  </p>
+                  <h3 class="font-cinzel text-lg">A soft archive of your orbit.</h3>
+                </div>
+                <div
+                  class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-violet-300/90 via-purple-300/90 to-fuchsia-300/90 flex items-center justify-center text-slate-950 text-base"
+                >
+                  ✎
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-200/85">
+                Save tarot spreads, rituals, manifestations and reflections into one
+                aurora-lit journal. Add free-form notes, track repeating themes and see how
+                your story is quietly changing over weeks and months.
+              </p>
+              <p class="text-xs text-violet-200/90 mt-1">
+                Every reading and ritual can land in your Journal with a single tap.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-slate-400/80">
+        <div class="border-t border-slate-700/60 pt-6 flex flex-col sm:flex-row gap-3 justify-between">
+          <p>© <span id="year"></span> Moirai Within. All rights reserved.</p>
+          <p class="text-slate-400/80">
+            Designed for aurora nights, quiet mornings and everything in between.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Simple current year for footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
